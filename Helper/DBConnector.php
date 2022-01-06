@@ -12,10 +12,9 @@ class DBConnector
     private string $servername;
     private string $username;
     private string $password;
-    private int $port;
     private $conn;
 
-    public function __construct($servername, $username, $password, $db, $port)
+    public function __construct($servername, $username, $password, $db)
     {
         $this->servername = $servername;
         $this->username = $username;

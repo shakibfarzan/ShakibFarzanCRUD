@@ -3,13 +3,13 @@
 namespace CRUD\Controller;
 
 use CRUD\Model\Actions;
+use CRUD\Model\Person;
 
 class PersonController
 {
-    public function switcher($uri,$request)
+    public function switcher($uri, $request)
     {
-        switch ($uri)
-        {
+        switch ($uri) {
             case Actions::CREATE:
                 $this->createAction($request);
                 break;
@@ -32,26 +32,23 @@ class PersonController
 
     public function createAction($request)
     {
-
+        $person = new Person();
+        $var = json_decode(file_get_contents('php://input'), true)['firstName'];
+        echo $var;
     }
 
     public function updateAction($request)
     {
-
     }
 
     public function readAction($request)
     {
-
     }
     public function readAllAction($request)
     {
-
     }
 
     public function deleteAction($request)
     {
-
     }
-
 }
